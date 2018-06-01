@@ -2,16 +2,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+
                     <p>
                     <%= @blog.user.nickname %>の記事</p>
 
                     <br />
-                    <h7>&emsp;&emsp;タイトル</h7>
+                    <h7>タイトル&emsp;:&emsp;</h7>
 
                     <%= @blog.title %>
 
                     <br />
+                    <div class="well">
+                    <p class="text-left text-muted">
                     <%= @blog.text %>
+                    </p>
+                </div>
+
+                    <% if user_signed_in? && current_user.id == @blog.user_id %>
+                    <%= link_to '編集', "/blogs/#{@blog.id}/edit", method: :get %>
+                    <%= link_to '削除', "/blogs/#{@blog.id}", method: :delete %>
+
+
+                    <% end %>
+
+
                 </div>
             </div>
         </div>

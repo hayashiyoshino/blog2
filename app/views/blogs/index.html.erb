@@ -2,7 +2,7 @@
         <div class="header-content">
             <div class="inner">
                 <h1 class="cursive">Blog2</h1>
-                <h4>Let's wrote a blog!</h4>
+                <h4>Let's write a blog!</h4>
             </div>
         </div>
         <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
@@ -24,7 +24,13 @@
                     <%= link_to blog.title,"/blogs/#{blog.id}" %></h7>
 
                     <br />
+                    <div class="well">
+                    <p class="text-left text-muted">
+
                     <%= blog.text %>
+
+                    </p>
+                    </div>
 
                     <% end %>
                 </div>
