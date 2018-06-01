@@ -17,12 +17,11 @@
                     <% @blogs.each do |blog| %>
                     <br />
 
-                    <h8>投稿者</h8>
+                    <h8>投稿者&emsp;:&emsp;<%= link_to blog.user.nickname, "/users/#{blog.user.id}" %></h8>
 
                     <br />
-                    <h7>&emsp;&emsp;タイトル</h7>
-
-                    <%= link_to blog.title,"/blogs/#{blog.id}" %>
+                    <h7>タイトル&emsp;:&emsp;
+                    <%= link_to blog.title,"/blogs/#{blog.id}" %></h7>
 
                     <br />
                     <%= blog.text %>
