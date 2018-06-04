@@ -8,20 +8,16 @@
 <br />
 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
 
-<form>
 <%= form_for @blog, :html => {:class => "form-horizontal"} do |f| %>
-<div class="form-group">
-<%= f.label :"新規投稿", :class => 'control-label' %>
-<%= f.text_field :title, placeholder: 'タイトル',:class => "form-control" %>
-</div>
-<br />
-<div class="form-group">
-<%= f.text_area :text, placeholder: '本文', :class => "form-control" %>
-</div>
-<br />
-<%= submit_tag :submit, :class => "btn btn-primary" %>
-</div>
+  <div class="form-group">
+  <h3><%= f.label :"新規投稿", :class => 'control-label' %></h3>
+  <%= f.text_field :title, placeholder: 'タイトル',:class => "form-control" %>
+  </div>
+  <br />
+  <div class="form-group">
+  <%= f.text_area :text, placeholder: '本文', :class => "form-control" %>
+  </div>
+  <br />
+  <%= f.submit "submit", :class => "btn btn-default" %>
+  </div>
 <% end %>
-</form>
-
-

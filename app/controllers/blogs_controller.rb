@@ -39,8 +39,7 @@ class BlogsController < ApplicationController
   end
 
   def create_params
-    params.require(:blog).permit(:title, :text).merge(user_id: current_user.id,
-      date: date_today)
+    params.require(:blog).permit(:title, :text).merge(user_id: current_user.id, date: date_today)
   end
 
 
