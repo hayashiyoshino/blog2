@@ -1,0 +1,32 @@
+<section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary">
+                    <<%= @nickname %>の記事一覧
+                    </h2>
+                    <br />
+                    <% @blogs.each do |blog| %>
+                    <br />
+
+                    <h8>作成日&emsp;:&emsp;</h8>
+                    <%= blog.date %>
+
+                    <br />
+                    <h7>タイトル&emsp;:&emsp;
+                    <%= link_to blog.title,"/blogs/#{blog.id}" %></h7>
+
+                    <br />
+                    <div class="well">
+                    <p class="text-left text-muted">
+
+                    <%= blog.text %>
+
+                    </p>
+                    </div>
+
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </section>
